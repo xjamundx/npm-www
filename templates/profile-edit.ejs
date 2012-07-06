@@ -1,8 +1,8 @@
 <h1>Edit your Profile</h1>
 
-<p><a href=/password>Change your Password</a></p>
+<p><a href="/password">Change your Password</a></p>
 
-<form method=post action=/profile-edit>
+<form method="post" action="/profile-edit">
   <input type=hidden name=_id value="<%= profile._id %>">
   <input type=hidden name=name value="<%= profile.name %>">
   <table width=100%>
@@ -19,7 +19,7 @@ Object.keys(fields).forEach(function (f) {
 %>
   </table>
 
-<input type=submit value=Save>
+  <input type="submit" value=Save>
 </form>
 
 <a href='/logout/?done=/profile/<%= profile.name %>'>log out</a>

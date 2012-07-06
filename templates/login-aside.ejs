@@ -3,7 +3,7 @@
   if (!profile) {
     %>
     <div class=profile>
-      <img src="https://secure.gravatar.com/avatar/avatar.jpg?s=50&d=mm" class="avatar"> <a href=/signup>Create Account</a> | <a href=/login>Login</a>
+      <img src="https://secure.gravatar.com/avatar/avatar.jpg?s=50&d=mm" class="avatar"> <a href="/signup">Create Account</a> | <a href="/login">Login</a>
     </div>
     <%
   } else {
@@ -13,9 +13,9 @@
       <img src="<%= profile.avatar %>" class="avatar">
       <% } %>
       <a href="/profile"><%= profile.fullname || profile.name %></a>
-      <p class=profsub>
-        <a class=profsub href=/profile-edit>Edit Profile</a>
-        <a class=profsub href=/logout>Log out</a>
+      <p class="profsub">
+        <a class="profsub"" href="/profile-edit">Edit Profile</a>
+        <a class="profsub"" href="/logout">Log out</a>
       </p>
     </div>
     <ul class="menu">
