@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
   text-align: left;
 
-  nav {
+  > nav {
     float: left;
     margin: 0 5px 0 0;
     width: 140px;
@@ -86,7 +86,7 @@ h1, h2, h3, h4, h5, h6 {
     border-right: 1px solid #999
   }
 
-  aside.login {
+  > aside {
     background: linear-gradient(top, hsla(0, 0%, 50%, 0.1), transparent);
     float: right;
     padding: 1em;
@@ -104,27 +104,26 @@ h1, h2, h3, h4, h5, h6 {
       vertical-align: middle;
     }
   }
+}
 
-  #page {
-    margin-left 120px + 80px;
-    margin-right: 220px + 40px;
+#page {
+  margin-left 120px + 80px;
+  margin-right: 220px + 40px;
+}
 
-    header {
-      h1 {
-        text-indent: -999em;
-        width: 200px;
-        height: 78px;
-        background: url('/static/npm.png') no-repeat;
-        background-size: 200px 78px;
-        margin: -5px 0 0;
-      }
-      form input {
-        font-size: 18px;
-        width: 50%;
-        float: right;
-      }
-    }
-  }
+#npm-logo {
+  text-indent: -999em;
+  width: 200px;
+  height: 78px;
+  background: url('/static/npm.png') no-repeat;
+  background-size: 200px 78px;
+  margin: -5px 0 0;
+}
+
+#search > input {
+  font-size: 18px;
+  width: 50%;
+  float: right;
 }
 
 #package {
@@ -197,4 +196,39 @@ h1, h2, h3, h4, h5, h6 {
       }
     }
   }
+}
+
+
+@media only screen and (max-width: 593px) {
+
+    #content {
+      
+      > nav {
+        float: none;
+        width: auto;
+      }
+      
+      > aside {
+        float: none;
+        width: auto;
+      }
+    
+      #search > input {
+        float: none;
+        width: 100%;
+      }
+    
+    }
+    
+    body {
+        padding: 0;
+    }
+    
+    #npm-logo {
+        margin: 10px 0;
+    }
+    
+    #page {
+      margin: 0;    
+    }
 }
