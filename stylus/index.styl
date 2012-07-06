@@ -37,12 +37,15 @@ h1, h2, h3, h4, h5, h6 {
 // layout
 
 #content {
-  max-width: 953px;
+  width: 953px;
   margin: 0 auto;
   text-align: left;
+  position: relative;
 
   > nav {
-    float: left;
+    position: absolute;
+    top: 0;
+    left: 0;
     margin: 0 5px 0 0;
     width: 140px;
     font-size: 11px;
@@ -78,13 +81,6 @@ h1, h2, h3, h4, h5, h6 {
       }
     }
   }
-  .profile .profsub {
-    margin:0;
-    font-size:11px;
-  }
-  .profile .profsub a:first {
-    border-right: 1px solid #999
-  }
 
   > aside {
     background: linear-gradient(top, hsla(0, 0%, 50%, 0.1), transparent);
@@ -97,6 +93,15 @@ h1, h2, h3, h4, h5, h6 {
       float: left;
       margin-right: 0.5em;
     }
+
+    .profile .profsub {
+     margin:0;
+     font-size:11px;
+    }
+    .profile .profsub a:first {
+      border-right: 1px solid #999
+    }
+  
     .profile {
       border-bottom: 1px solid #CCC;
       line-height: 25px;
@@ -109,6 +114,11 @@ h1, h2, h3, h4, h5, h6 {
 #page {
   margin-left 120px + 80px;
   margin-right: 220px + 40px;
+  header {
+    > a {
+      display: inline-block
+    }
+  }
 }
 
 #npm-logo {
@@ -120,10 +130,15 @@ h1, h2, h3, h4, h5, h6 {
   margin: -5px 0 0;
 }
 
-#search > input {
-  font-size: 18px;
+#search {
+  display: inline-block;
   width: 50%;
   float: right;
+  > input {
+    width: 100%;
+    font-size: 18px;
+    box-sizing: border-box;
+  }
 }
 
 #package {
@@ -139,10 +154,7 @@ h1, h2, h3, h4, h5, h6 {
     font: 18px Georgia, serif;
   }
   td.with-avatar {
-    position: relative;
-    padding-left: 30px;
     .avatar {
-      position: absolute;
       top: 5px;
       left: 0;
       width: 25px;
@@ -202,33 +214,49 @@ h1, h2, h3, h4, h5, h6 {
 @media only screen and (max-width: 593px) {
 
     #content {
+
+      width: auto;
       
       > nav {
-        float: none;
         width: auto;
+        position: static;
       }
       
       > aside {
         float: none;
         width: auto;
+        .profile {
+          line-height: auto;
+          border-bottom: none;
+          padding-bottom: 0; 
+        }
       }
-    
-      #search > input {
-        float: none;
+  
+      #page {
+        > header {
+          height: 150px      
+        }    
+      }
+
+      #search {
+        display: block;
         width: 100%;
+        > input {
+          float: none;
+        }
       }
-    
     }
-    
+ 
     body {
         padding: 0;
     }
     
     #npm-logo {
-        margin: 10px 0;
-    }
+      margin: 10px 0;
+   }
     
     #page {
       margin: 0;    
+      padding: 5px;
     }
 }

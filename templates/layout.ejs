@@ -8,23 +8,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <div id="content">
+<div id="content">
 
-  <%- include('nav.ejs') %>
   <%- include('login-aside.ejs', locals) %>
-
+  
   <div id="page">
+    
     <header>
-    <form id="search">
-      <input type="search" placeholder="Search Packages">
-    </form>
-    <a href="/"><h1 id="npm-logo">npm</h1></a>
+      <a href="/"><h1 id="npm-logo">npm</h1></a>
+      <form id="search">
+       <input type="search" placeholder="Search Packages">
+      </form>
     </header>
 
-    <div id="content">
+    <div id="main">
       <%- include(content, locals) %>
     </div>
+
   </div>
-  </div>
+    
+  <%- include('nav.ejs') %>
+
+  
+</div>
 </body>
 </html>
