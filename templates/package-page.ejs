@@ -64,7 +64,9 @@
         <tr>
           <th>Starred by:</th>
           <td>
-            <%= package.users %>
+            <% Object.keys(package.users).forEach(function(user) { %>
+              <%= user %>
+            <% }) %>
           </td>
         </tr>
         <% } %>
