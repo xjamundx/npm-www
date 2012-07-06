@@ -5,7 +5,8 @@
   <title><%= (typeof title !== 'undefined' ? title : 'npm') %></title>
   <link type="text/css" rel="stylesheet" media="all" href="/static/normalize.css" />
   <link type="text/css" rel="stylesheet" media="all" href="/stylus/index.css" />
-  <body>
+</head>
+<body>
   <div id="content">
 
   <%- include('nav.ejs') %>
@@ -23,6 +24,6 @@
       <%- include(content, locals) %>
     </div>
   </div>
-</div>
-  </body>
+  </div>
+</body>
 </html>
