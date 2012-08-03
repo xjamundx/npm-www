@@ -152,8 +152,7 @@ form {
     }
   }
   .profile {
-    margin-top:4px;
-
+    line-height: 25px;
     .profsub {
       margin:0;
       font-size:11px;
@@ -210,6 +209,9 @@ form {
   table.metadata {
     margin: 1em 0;
     width: 100%;
+    .user {
+      height: 30px;
+    }
   }
   tr {
     border-top: solid 1px #ccc;
@@ -266,7 +268,6 @@ form {
 }
 
 .user {
-  padding-left: 32px;
   position: relative;
 
   .username {
@@ -274,12 +275,17 @@ form {
   }
 
   .avatar {
-    position: absolute;
-    top: -4px;
-    left: 0;
+    float: left;
+    margin-right: 1em;
+    width: 75px;
+    height: 75px;
+  }
+
+  .avatar-small {
     width: 25px;
     height: 25px;
   }
+
 }
 
 .showprofile {
